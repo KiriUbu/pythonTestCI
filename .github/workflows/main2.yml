@@ -29,5 +29,5 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Kuck ob gamelogger.log da ist 
-        run: if [ -f gameLogger.log ]; cat gameLogger.log
+        run: if [ -f gameLogger.log ]; cat gameLogger.log ; fi
 
