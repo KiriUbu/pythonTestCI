@@ -2,7 +2,7 @@ import logging
 from art import *
 
 def configLogs():
-    logging.basicConfig(filename='gameLogger.log', encoding='utf-8', level=logging.DEBUG)
+    logging.basicConfig(filename='gameLogger.log',  level=logging.DEBUG)
 
 def start_game():
     configLogs()
