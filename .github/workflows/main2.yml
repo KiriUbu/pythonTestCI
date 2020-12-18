@@ -31,3 +31,8 @@ jobs:
         run:
           pip3 install -r requirements.txt
 
+      - name: starte das Spiel
+          run: python3 run.py
+
+
+
