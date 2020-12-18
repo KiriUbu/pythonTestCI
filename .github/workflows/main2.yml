@@ -30,7 +30,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: installiere  dependency
         run:
-          pip install -r requirements.txt
+          pip3 install -r requirements.txt
 
       # Runs a set of commands using the runners shell
       - name: Kuck ob das spiel startet
