@@ -1,7 +1,13 @@
 import logging
+import sys
 from art import *
 
+
+
+
 def configLogs():
+
+
     logging.basicConfig(filename='gameLogger.log',  level=logging.DEBUG)
 
 def start_game():
@@ -19,7 +25,11 @@ def ask_player():
     print("[2] Stein")
     print("[3] Papier")
 
-    auswahl = input()
+    try:
+        if sys.argv[1] != False :
+            auswahl = sys.argv[1]
+    except IndexError:
+            auswahl = input()
 
     if auswahl == "1":
         auswahlch="Schere"
@@ -39,7 +49,14 @@ def conterPC(auswahl,conter):
     print("Nochmal ? :) ")
     print("y/n ?")
 
-    yes_no=input()
+
+    try:
+        if sys.argv[1] != False :
+            yes_no="n"
+    except IndexError:
+            yes_no=input()
+
+
     if yes_no == "y":
         ask_player()
         logging.warning("User have try again")
