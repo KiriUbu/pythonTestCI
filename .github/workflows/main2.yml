@@ -1,8 +1,6 @@
-# This is a basic workflow to help you get started with Actions
 
 name: KiriTest
-# Controls when the action will run. 
-on:
+on: [push]
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
@@ -24,15 +22,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: man einen Cat auf Logger
+      - name: Cat auf Logger
         run: cat gameLogger.log
 
       # Runs a set of commands using the runners shell
       - name: installiere  dependency
         run:
           pip3 install -r requirements.txt
-
-      # Runs a set of commands using the runners shell
-      - name: Kuck ob das spiel startet
-        run: python3 run.py
 
