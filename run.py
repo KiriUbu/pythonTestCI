@@ -9,6 +9,7 @@ def start_game():
 
     tprint("Schere Stein Papier")
     print("Hallo das hier ist ein Schere Stein Papier Spiel")
+    print("Es ist ein Super Spiel ")
     ask_player()
   
 
