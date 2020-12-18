@@ -14,8 +14,10 @@ def start_game():
     configLogs()
 
     tprint("Schere Stein Papier")
+    aprint("random")
+    print("")
     print("Hallo das hier ist ein Schere Stein Papier Spiel")
-    print("Es ist ein Super Spiel ")
+
     ask_player()
   
 

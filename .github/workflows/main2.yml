@@ -31,10 +31,14 @@ jobs:
         run:
           pip3 install -r requirements.txt
 
-      - name: starte das Spiel
+      - name: Spiele das spiel mit Schere
+        run: python3 run.py 1
+
+      - name: Spiele das spiel mit Stein
         run: python3 run.py 2
 
-
+      - name: Spiele das spiel mit Papier
+        run: python3 run.py 3
 
 
 
