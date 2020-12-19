@@ -1,0 +1,32 @@
+
+name: KiriTest Mac
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: installiere  dependency
+        run: pip3 install -r requirements.txt
+
+      - name: Spiele das spiel mit Schere
+        run: python3 run.py 1
+
+      - name: Spiele das spiel mit Stein
+        run: python3 run.py 2
+
+      - name: Spiele das spiel mit Papier
+        run: python3 run.py 3
+
+      - name: Cat auf Logger
+        run: cat gameLogger.log
+
